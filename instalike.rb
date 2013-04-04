@@ -51,6 +51,9 @@ selected_tags.shuffle.each do |tag|
       begin
         Instagram.like_media(photo.id)
         puts "completed liking #{photo.id}"
+        minutes_to_wait = 1
+        puts "sleeping for #{minutes_to_wait} minutes..."
+        sleep minutes_to_wait * 60
       rescue Exception => e  
         error_count = error_count + 1
         puts e.message 
